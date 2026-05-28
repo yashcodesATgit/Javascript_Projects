@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Snake Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-container">
+
+        <!-- Score bar -->
+        <div class="top-bar">
+            <div class="score-box">
+                <div class="score-title">HIGH SCORE</div>
+                <div class="score-value" id="highScore">0</div>
+            </div>
+            <div class="score-box">
+                <div class="score-title">SCORE</div>
+                <div class="score-value" id="score">0</div>
+            </div>
+            <div class="score-box">
+                <div class="score-title">TIME</div>
+                <div class="score-value" id="timer">00:00</div>
+            </div>
+        </div>
+
+        <!-- Game board -->
+        <div class="game-board" id="gameBoard"></div>
+
+        <!-- D-pad controls -->
+        <div class="controls">
+            <button class="control-btn" onclick="changeDirection('up')">↑</button>
+            <div class="middle-buttons">
+                <button class="control-btn" onclick="changeDirection('left')">←</button>
+                <button class="control-btn" onclick="pauseGame()">❚❚</button>
+                <button class="control-btn" onclick="changeDirection('right')">→</button>
+            </div>
+            <button class="control-btn" onclick="changeDirection('down')">↓</button>
+        </div>
+
+    </div>
+
+    <!-- Game over overlay -->
+    <div class="game-over-screen" id="gameOverScreen">
+        <div class="popup">
+            <h1>Game Over</h1>
+            <p>Your snake crashed!</p>
+            <button class="restart-btn" onclick="restartGame()">Restart Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
